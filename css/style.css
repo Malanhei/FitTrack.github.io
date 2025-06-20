@@ -1,0 +1,388 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  font-size: clamp(16px, 2.5vw, 18px);
+}
+
+/* Header styles */
+.header {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: clamp(15px, 3vw, 20px);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__title {
+  margin: 0;
+  font-size: clamp(24px, 5vw, 32px);
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 20px);
+  list-style: none;
+  padding: 0;
+  margin: clamp(5px, 1vw, 10px) 0 0;
+}
+
+.nav__list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(14px, 2vw, 16px);
+  transition: color 0.3s ease;
+}
+
+.nav__list a:hover {
+  color: #4caf50;
+}
+
+/* Main content */
+.main {
+  padding: clamp(15px, 3vw, 20px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400?text=Healthy+Living');
+  background-size: cover;
+  background-position: center;
+  padding: clamp(30px, 5vw, 50px);
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.hero h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: clamp(16px, 2.5vw, 18px);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: clamp(8px, 1.5vw, 12px) clamp(15px, 2vw, 20px);
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #388e3c;
+}
+
+/* Info section for new content */
+.info-section {
+  background: #fff;
+  padding: clamp(15px, 2vw, 20px);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.info-section h3 {
+  margin: 0 0 10px;
+  color: #2b2b2b;
+  font-size: clamp(18px, 2.5vw, 20px);
+}
+
+.info-section p {
+  margin: 0 0 10px;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #ccc;
+  padding: clamp(8px, 1.5vw, 10px);
+  text-align: left;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.info-table thead {
+  background-color: #eee;
+}
+
+/* Food table */
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.food-table th,
+.food-table td {
+  border: 1px solid #ccc;
+  padding: clamp(8px, 1.5vw, 10px);
+  text-align: left;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.food-table thead {
+  background-color: #eee;
+}
+
+/* Form section */
+.form-section {
+  background: #fff;
+  padding: clamp(15px, 3vw, 20px);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.food-form,
+.workout-form,
+.water-form,
+.contact-form {
+  display: grid;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.food-form input,
+.food-form textarea,
+.workout-form select,
+.workout-form textarea,
+.water-form input,
+.water-form select,
+.contact-form input,
+.contact-form textarea {
+  padding: clamp(8px, 1.5vw, 10px);
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.food-form button,
+.workout-form button,
+.water-form button,
+.contact-form button {
+  background-color: #2b2b2b;
+  color: #fff;
+  cursor: pointer;
+  padding: clamp(8px, 1.5vw, 10px);
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(14px, 2vw, 16px);
+  transition: background 0.3s ease;
+}
+
+.food-form button:hover,
+.workout-form button:hover,
+.water-form button:hover,
+.contact-form button:hover {
+  background-color: #4caf50;
+}
+
+/* Tooltip for inputs */
+.form-section span[title] {
+  position: relative;
+  cursor: help;
+}
+
+.form-section span[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Workout grid */
+.workout-grid {
+  display: grid;
+  gap: clamp(15px, 2vw, 20px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.workout-card {
+  background-color: #fff;
+  padding: clamp(15px, 2vw, 20px);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.workout-card::before {
+  content: "💪";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.workout-card h3 {
+  margin: 0 0 10px;
+  color: #2b2b2b;
+  font-size: clamp(18px, 2.5vw, 20px);
+}
+
+.workout-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Water grid */
+.water-grid {
+  display: grid;
+  gap: clamp(15px, 2vw, 20px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.water-day {
+  background: #e0f7fa;
+  padding: clamp(15px, 2vw, 20px);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.water-day::before {
+  content: "💧";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.water-day h3 {
+  margin: 0 0 10px;
+  color: #00796b;
+  font-size: clamp(18px, 2.5vw, 20px);
+}
+
+/* Map section */
+.map-container {
+  margin-top: clamp(15px, 2vw, 20px);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 100%;
+  height: 300px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: clamp(10px, 2vw, 15px);
+  background-color: #ddd;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.footer a {
+  color: #2b2b2b;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #4caf50;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header__title {
+    font-size: clamp(20px, 4vw, 24px);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .food-table th,
+  .food-table td,
+  .info-table th,
+  .info-table td {
+    font-size: clamp(12px, 2vw, 14px);
+    padding: 6px;
+  }
+
+  .workout-grid,
+  .water-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section,
+  .info-section {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__title {
+    font-size: clamp(18px, 3.5vw, 20px);
+  }
+
+  .nav__list a {
+    font-size: clamp(12px, 2vw, 14px);
+  }
+
+  .hero h2 {
+    font-size: clamp(20px, 3.5vw, 24px);
+  }
+
+  .hero p {
+    font-size: clamp(14px, 2vw, 16px);
+  }
+
+  .food-form,
+  .workout-form,
+  .water-form,
+  .contact-form {
+    max-width: 100%;
+  }
+}

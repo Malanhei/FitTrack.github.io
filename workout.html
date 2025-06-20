@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitTrack — Тренировки</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">FitTrack</h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="food.html">Питание</a></li>
+        <li><a href="workout.html">Тренировки</a></li>
+        <li><a href="water.html">Вода</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Тренировочный дневник</h2>
+
+    <section class="workout-grid">
+      <article class="workout-card">
+        <h3>Понедельник</h3>
+        <ul>
+          <li>Приседания — 3x15</li>
+          <li>Отжимания — 3x12</li>
+          <li>Планка — 60 сек</li>
+        </ul>
+      </article>
+
+      <article class="workout-card">
+        <h3>Среда</h3>
+        <ul>
+          <li>Бёрпи — 3x10</li>
+          <li>Пресс — 3x20</li>
+          <li>Скакалка — 5 минут</li>
+        </ul>
+      </article>
+
+      <article class="workout-card">
+        <h3>Пятница</h3>
+        <ul>
+          <li>Выпады — 3x12</li>
+          <li>Подтягивания — 3x5</li>
+          <li>Бег — 20 минут</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="form-section">
+      <h3>Добавить тренировку</h3>
+      <form class="workout-form" action="#" method="post">
+        <label>
+          День недели:
+          <select name="day" required>
+            <option value="">Выбери...</option>
+            <option>Понедельник</option>
+            <option>Вторник</option>
+            <option>Среда</option>
+            <option>Четверг</option>
+            <option>Пятница</option>
+            <option>Суббота</option>
+            <option>Воскресенье</option>
+          </select>
+        </label>
+        <label>
+          Упражнения:
+          <textarea name="exercises" rows="4" placeholder="Например: Приседания — 3x15" required></textarea>
+        </label>
+        <button type="submit">Сохранить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 FitTrack</p>
+  </footer>
+</body>
+</html>

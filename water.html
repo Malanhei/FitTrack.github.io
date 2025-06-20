@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitTrack — Вода</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">FitTrack</h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="food.html">Питание</a></li>
+        <li><a href="workout.html">Тренировки</a></li>
+        <li><a href="water.html">Вода</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Учёт воды</h2>
+
+    <section class="water-grid">
+      <article class="water-day">
+        <h3>Понедельник</h3>
+        <p>Выпито: <strong>6 стаканов</strong></p>
+      </article>
+
+      <article class="water-day">
+        <h3>Вторник</h3>
+        <p>Выпито: <strong>8 стаканов</strong></p>
+      </article>
+
+      <article class="water-day">
+        <h3>Среда</h3>
+        <p>Выпито: <strong>5 стаканов</strong></p>
+      </article>
+    </section>
+
+    <section class="form-section">
+      <h3>Добавить запись</h3>
+      <form class="water-form" action="#" method="post">
+        <label>
+          День недели:
+          <select name="day" required>
+            <option value="">Выбери...</option>
+            <option>Понедельник</option>
+            <option>Вторник</option>
+            <option>Среда</option>
+            <option>Четверг</option>
+            <option>Пятница</option>
+            <option>Суббота</option>
+            <option>Воскресенье</option>
+          </select>
+        </label>
+        <label>
+          Кол-во стаканов:
+          <input type="number" name="glasses" min="0" required>
+        </label>
+        <button type="submit">Сохранить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 FitTrack</p>
+  </footer>
+</body>
+</html>

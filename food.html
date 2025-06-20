@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitTrack — Питание</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">FitTrack</h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="food.html">Питание</a></li>
+        <li><a href="workout.html">Тренировки</a></li>
+        <li><a href="water.html">Вода</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Дневник питания</h2>
+
+    <section class="table-section">
+      <h3>Понедельник</h3>
+      <table class="food-table">
+        <thead>
+          <tr>
+            <th>Время</th>
+            <th>Блюдо</th>
+            <th>Калории</th>
+            <th>Продукты</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00</td>
+            <td>Овсянка с фруктами</td>
+            <td>350</td>
+            <td>Овсянка, банан, мёд</td>
+          </tr>
+          <tr>
+            <td>13:00</td>
+            <td>Курица с рисом</td>
+            <td>600</td>
+            <td>Куриная грудка, рис, брокколи</td>
+          </tr>
+          <tr>
+            <td>18:30</td>
+            <td>Овощной салат</td>
+            <td>200</td>
+            <td>Огурец, помидор, масло</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Итого за день</td>
+            <td><strong>1150</strong></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="form-section">
+      <h3>Добавить приём пищи</h3>
+      <form class="food-form" action="#" method="post">
+        <label>
+          Время:
+          <input type="time" name="time" required>
+        </label>
+        <label>
+          Блюдо:
+          <input type="text" name="dish" required>
+        </label>
+        <label>
+          Калории:
+          <input type="number" name="calories" required>
+        </label>
+        <label>
+          Продукты:
+          <textarea name="ingredients" rows="2"></textarea>
+        </label>
+        <button type="submit">Сохранить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 FitTrack</p>
+  </footer>
+</body>
+</html>
